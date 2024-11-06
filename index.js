@@ -116,7 +116,8 @@ const checkAnswer = () => {
 
     const selectedAnswer = document.querySelector(".answer.selected");
     if(selectedAnswer){
-        const answer = selectedAnswer.querySelector(".text");
+        const answer = selectedAnswer.querySelector(".text").innerHTML;
+        console.log(currentQuestion);
         if(answer === questions[currentQuestion - 1].correct_answer){
             score++;
             selectedAnswer.classList.add("correct");
